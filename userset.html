@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>userset</title>
+	<link rel="stylesheet" type="text/css" href="../../libs/css/bootstrap.min.css">
+	<script type="text/javascript" src="../../libs/js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../../libs/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bundle.js"></script>
+	<script type="text/javascript">
+	var fs = require('/io.js');
+	var url = "userconifg.json";
+	fs.exists(url,function(n){if(n){console.log('userconifg.json已存在');}else{console.log('userconifg.json未安装');}})
+	function sub()
+	{
+		
+		var cont = [];
+		cont.push('{"name": "'+$("#name").val()+'","author": "'+$("#author").val()+'","description": "'+$("#description").val()+'","date":"'+$("#date").val()+'"}');	
+			fs.exists(url,function(n){
+			if(n)
+			{
+				console.log('userconifg.json已存在');
+			}else{
+				console.log('userconifg.json未安装');
+			}
+			fs.writeFile(url,cont.join(''),function(n){
+				if(n)
+				{
+					$("#contion").html("设置成功！")
+				}
+			})
+		})
+	}
+	</script>
+</head>
+<body>
+	<div class="container" id="form">
+		<h2>用户设置</h2>
+			<div class="form-group">
+				<label>name</label>
+				<input type="text" id="name" class="form-control" placeholder="项目名称" value=""></div>
+			<div class="form-group">
+				<label>author</label>
+				<input type="text" id="author" class="form-control" placeholder="作者" value=""></div>
+			<div class="form-group">
+				<label>description</label>
+				<input id="description" type="text" class="form-control" placeholder="项目介绍" value="">
+			</div>
+			<div class="form-group">
+				<label>date</label>
+				<input id="date" type="text" class="form-control" placeholder="项目周期：0318-0411" value=""></div>
+			<button type="submit" class="btn btn-default" onclick="sub()">Submit</button>
+			<h3 id="contion" style="color: #a90000"></h3>
+	</div>
+</body>
+</html>
