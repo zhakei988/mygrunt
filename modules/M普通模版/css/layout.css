@@ -1,0 +1,55 @@
+/*c:JakeChiu,150609*/
+input,button,select,textarea{ resize:none;outline:none;font-size:1.4rem;-webkit-appearance:button;-webkit-appearance: none;font-family:"Helvetica neue",Helvetica,Tahoma,"lantinghei sc","Microsoft Yahei",sans-serif;}
+body, ul, ol, dd, dl, dt, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
+	padding : 0;
+	border : 0;
+	margin:0;
+	font-family:"Helvetica neue",Helvetica,Tahoma,"lantinghei sc","Microsoft Yahei",sans-serif;
+}
+html{ font-size:62.5%;height:100%;-webkit-text-size-adjust:none;}
+body {
+	font-size:1.4em;
+	margin:0px auto;
+	height:100%;
+}
+ul, ol {
+	list-style-type : none;
+}
+select, input, img, select {
+	vertical-align : middle;
+}
+a {
+	text-decoration : none;
+	color:#000;
+}
+a:link {
+	color: #000000;
+}
+a:visited {
+	color: #4073AB;
+}
+a:active {
+	color: #990000;
+}
+a:hover {
+	color: #990000;
+}
+.clearit {
+	clear : both;
+}
+.strong {
+	font-weight:bold
+}
+.dis {
+	display:block;
+}
+.undis {
+	display:none;
+}
+.fl{ float:left}
+.fr{ float:right}
+/* clearfix------------------------------------------*/
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }

@@ -1,0 +1,23 @@
+/*c:JakeChiu,131212*/
+/* CSS Document */
+@import url("layout.css");
+.wrap{ width:100%}
+body{ overflow:hidden}
+.loading{ width:100%; background:#fff; position:absolute; z-index:100; top:0; text-align:center; height:100%; opacity:1; transition:opacity 0.5s}
+.loading img{ margin-top:65%; width:20%}
+.hide{ opacity:0; z-index:1}
+.list{z-index:2; top:0; width:100%; position:absolute}
+.list-transtion{ transition:all 0.5s;}
+.list-lay{ background-size:cover; background-repeat:no-repeat; background-position:center; width:100%; }
+.bg1{ background-image:url(http://img.hexun.com/zk/201502/xacjh5/images/bg/bg01.jpg);}
+.bg2{ background-image:url(http://img.hexun.com/zk/201502/xacjh5/images/bg/bg02.jpg);}
+.bg3{ background-image:url(http://img.hexun.com/zk/201502/xacjh5/images/bg/bg03.jpg);}
+.bg4{ background-image:url(http://img.hexun.com/zk/201502/xacjh5/images/bg/bg04.jpg);}
+.bg5{ background-image:url(http://img.hexun.com/zk/201502/xacjh5/images/bg/bg05.jpg);}
+.bg6{ background-image:url(http://img.hexun.com/zk/201502/xacjh5/images/bg/bg06.jpg);}
+.jt{ background:url(http://img.hexun.com/zk/201502/xacjh5/images/css_sprite01.png) no-repeat -186px center /260px 46px; bottom:0; z-index:3;animation:start 1.5s infinite ease-in-out; width:40px; height:60px; position:absolute;bottom:0; left:46%; color:#a00}
+@keyframes start {
+0%,30% {opacity: 0;transform: translate(0,10px);}
+60% {opacity: 1;transform: translate(0,0);}
+100% {opacity: 0;transform: translate(0,-18px);}
+}
